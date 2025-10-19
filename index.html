@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>السيرة الذاتية - أحمد الخولي</title>
+    <title>Ahmed EL-Kholy's CV</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
@@ -23,7 +23,7 @@
         }
         /* Styling for section titles, including responsive font sizes, bold text, and a blue underline */
         .section-title {
-            @apply text-3xl md:text-4xl font-bold text-blue-400 mb-6 border-b-4 border-blue-600 pb-2 inline-flex items-center space-x-3 space-x-reverse; /* Adjusted for dark theme and icon alignment */
+            @apply text-3xl md:text-4xl font-bold text-blue-400 mb-6 border-b-4 border-blue-600 pb-2 inline-flex items-center space-x-3; /* Adjusted for dark theme and icon alignment, space-x for LTR */
         }
         /* Styling for card elements, providing a dark background, padding, rounded corners, shadow, and hover effects */
         .card {
@@ -49,7 +49,7 @@
             @apply flex items-center;
         }
         .list-item-icon {
-            @apply text-blue-400 ml-2; /* Margin-left for Arabic direction */
+            @apply text-blue-400 mr-2; /* Margin-right for LTR direction */
         }
         /* Styling for clickable contact links to ensure consistent appearance */
         .contact-link {
@@ -63,14 +63,15 @@
     <nav class="sticky top-0 z-50 bg-gray-900 shadow-md py-4">
         <div class="container mx-auto px-4">
             <div class="nav-container flex items-center justify-center space-x-4 md:space-x-6">
-                <a href="#header" class="nav-button">الرئيسية</a>
-                <a href="#summary" class="nav-button">الملخص</a>
-                <a href="#experience" class="nav-button">الخبرة</a>
-                <a href="#education" class="nav-button">التعليم</a>
-                <a href="#skills" class="nav-button">المهارات</a>
-                <a href="#courses" class="nav-button">الدورات</a>
-                <a href="#activities" class="nav-button">الأنشطة</a>
-                <a href="#internship" class="nav-button">التدريب</a>
+                <a href="#header" class="nav-button">Home</a>
+                <a href="#summary" class="nav-button">Summary</a>
+                <a href="#experience" class="nav-button">Experience</a>
+                <a href="#projects" class="nav-button">Projects</a>
+                <a href="#education" class="nav-button">Education</a>
+                <a href="#skills" class="nav-button">Skills</a>
+                <a href="#courses" class="nav-button">Courses</a>
+                <a href="#activities" class="nav-button">Activities</a>
+                <a href="#internship" class="nav-button">Internship</a>
             </div>
         </div>
     </nav>
@@ -79,22 +80,22 @@
 
         <!-- Header Section -->
         <section id="header" class="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-8 md:p-12 rounded-xl shadow-lg mb-12 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">أحمد الخولي</h1>
-            <p class="text-lg md:text-xl mb-6">مهندس كمبيوتر</p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 md:space-x-reverse text-sm md:text-base">
-                <div class="flex items-center space-x-2 space-x-reverse">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Ahmed EL-Kholy</h1>
+            <p class="text-lg md:text-xl mb-6">Computer Engineer</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-8 text-sm md:text-base">
+                <div class="flex items-center space-x-2">
                     <i class="fas fa-map-marker-alt w-5 h-5"></i>
-                    <span>الجيزة، مصر</span>
+                    <span>Giza, Egypt</span>
                 </div>
-                <div class="flex items-center space-x-2 space-x-reverse">
-                    <i class="fab fa-whatsapp w-5 h-5"></i> <!-- WhatsApp icon -->
-                    <a href="https://wa.me/201101467118" target="_blank" class="contact-link">01101467118</a>
+                <div class="flex items-center space-x-2">
+                    <i class="fab fa-whatsapp w-5 h-5"></i>
+                    <a href="https://wa.me/201101467118" target="_blank" class="contact-link">+201101467118</a>
                 </div>
-                <div class="flex items-center space-x-2 space-x-reverse">
+                <div class="flex items-center space-x-2">
                     <i class="fas fa-envelope w-5 h-5"></i>
                     <a href="mailto:ahmed1elkholy1@gmail.com" class="contact-link">ahmed1elkholy1@gmail.com</a>
                 </div>
-                <div class="flex items-center space-x-2 space-x-reverse">
+                <div class="flex items-center space-x-2">
                     <i class="fab fa-linkedin w-5 h-5"></i>
                     <a href="www.linkedin.com/in/ahmed-elkholy222" target="_blank" class="contact-link">LinkedIn</a>
                 </div>
@@ -105,7 +106,7 @@
         <section id="summary" class="mb-12">
             <h2 class="section-title">
                 <i class="fas fa-user-circle text-blue-400"></i>
-                الملخص
+                Summary
             </h2>
             <div class="card">
                 <p class="text-lg leading-relaxed text-gray-200">
@@ -118,66 +119,156 @@
         <section id="experience" class="mb-12">
             <h2 class="section-title">
                 <i class="fas fa-briefcase text-blue-400"></i>
-                الخبرة
+                Experience
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Prioritized Technological Experiences -->
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-bug list-item-icon"></i>
-                        صائد ثغرات / (hackerone – yeswehack-bugcrowd)
+                        Bug Bounty Hunter / (hackerone – yeswehack-bugcrowd)
                     </h3>
-                    <p class="text-gray-400">2023 – حتى الآن</p>
-                    <p class="mt-3 text-gray-200">صيد الثغرات الأمنية وتقديم التقارير على منصات مختلفة.</p>
+                    <p class="text-gray-400">2023 – Present</p>
+                    <p class="mt-3 text-gray-200">Hunting for security vulnerabilities and reporting them on various platforms.</p>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-mask list-item-icon"></i>
-                        هاكر أخلاقي (عمل تطوعي) / Darkarmy – laizerdgroup – Anonymous
+                        Ethical Hacker (Volunteerism) / Darkarmy – laizerdgroup – Anonymous
                     </h3>
-                    <p class="text-gray-400">2022 – حتى الآن</p>
-                    <p class="mt-3 text-gray-200">المساهمة في الأمن السيبراني من خلال العمل التطوعي مع مجموعات الهاكر الأخلاقي.</p>
+                    <p class="text-gray-400">2022 – Present</p>
+                    <p class="mt-3 text-gray-200">Contributing to cybersecurity through volunteer work with ethical hacker groups.</p>
                 </div>
-                <!-- Other Experiences -->
+                <!-- NEW ICT Experience (High Priority) -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-network-wired list-item-icon"></i>
+                        ICT Unit / Oseem Police Station
+                    </h3>
+                    <p class="text-gray-400">2024 – 2025</p>
+                    <p class="mt-3 text-gray-200">Responsible for managing and maintaining Information and Communication Technology systems within the police station.</p>
+                </div>
+                <!-- Other Experiences - Sorted by start date, newest first -->
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-user-tie list-item-icon"></i>
-                        مشرف / بيكل
+                        Assistant Manager / Pickl
                     </h3>
-                    <p class="text-gray-400">القاهرة، مصر | 2024 – 2025</p>
+                    <p class="text-gray-400">Cairo, Egypt | 2024 – 2025</p>
                     <ul class="list-disc list-inside mt-3 text-gray-200 space-y-1">
-                        <li>مراجعة وتحديث وتدريب الموظفين.</li>
-                        <li>التعامل مع بيانات جداول Excel واستخدامها.</li>
+                        <li>Review, update, and train employees.</li>
+                        <li>Attend to and use Excel sheet data.</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-paint-brush list-item-icon"></i>
-                        مصمم جرافيك / مجموعة مهندس
+                        Graphic Designer / Mohandes Group
                     </h3>
-                    <p class="text-gray-400">2023 – ديسمبر 2024</p>
-                    <p class="mt-3 text-gray-200">تصميم مواد جرافيكية لمجموعة مهندس.</p>
-                </div>
-                <div class="card">
-                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
-                        <i class="fas fa-chalkboard-teacher list-item-icon"></i>
-                        مسؤول تدريب وتعليم، مجلس الشباب المصري
-                    </h3>
-                    <p class="text-gray-400">القاهرة، مصر | يونيو 2020 – أغسطس 2023</p>
-                    <ul class="list-disc list-inside mt-3 text-gray-200 space-y-1">
-                        <li>المساعدة في تصميم جداول البرامج التدريبية.</li>
-                    </ul>
+                    <p class="text-gray-400">2023 – Dec 2024</p>
+                    <p class="mt-3 text-gray-200">Designing graphic materials for Mohandes Group.</p>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-gavel list-item-icon"></i>
-                        منسق وقائد، وحدة المحكمة، جامعة القاهرة
+                        Coordinator and Leader, Module of Court, Cairo University
                     </h3>
-                    <p class="text-gray-400">القاهرة، مصر | 2021 - 2022</p>
+                    <p class="text-gray-400">Cairo, Egypt | 2021 - 2022</p>
                     <ul class="list-disc list-inside mt-3 text-gray-200 space-y-1">
-                        <li>المساعدة في تصميم البرامج التدريبية وجدولتها مع د. محمود (قاضي التحقيق بالمحكمة الجنائية).</li>
+                        <li>Assisted in designing training programs and scheduling them with Dr. Mahmoud (Investigating Judge of the Criminal Court).</li>
                     </ul>
                 </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-chalkboard-teacher list-item-icon"></i>
+                        Training and Education Officer, Egyptian Youth Council
+                    </h3>
+                    <p class="text-gray-400">Cairo, Egypt | June 2020 – August 2023</p>
+                    <ul class="list-disc list-inside mt-3 text-gray-200 space-y-1">
+                        <li>Assisted in designing training programs and scheduling them.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-burger list-item-icon"></i>
+                        Shift Manager / Burger King
+                    </h3>
+                    <p class="text-gray-400">2017 – 2020</p>
+                    <p class="mt-3 text-gray-200">Managed shifts and team operations in a fast-paced environment.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="mb-12">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb text-blue-400"></i>
+                Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Cybersecurity and AI Projects -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-eye list-item-icon"></i>
+                        The Eye (Facial Recognition)
+                    </h3>
+                    <p class="text-gray-400">Category: AI & Computer Vision</p>
+                    <p class="mt-3 text-gray-200">A facial recognition program utilizing Augmented Artificial Intelligence (AAI) technology for enhanced identification capabilities.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-video list-item-icon"></i>
+                        Cameye
+                    </h3>
+                    <p class="text-gray-400">Category: Cybersecurity</p>
+                    <p class="mt-3 text-gray-200">A program designed for exploiting vulnerabilities in device cameras to gain unauthorized access.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-virus list-item-icon"></i>
+                        Peyti (Network Ransomware)
+                    </h3>
+                    <p class="text-gray-400">Category: Malware Development</p>
+                    <p class="mt-3 text-gray-200">A ransomware virus that propagates across a network upon connection to any device.</p>
+                </div>
+                
+                <!-- Business and Management Projects -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-chart-bar list-item-icon"></i>
+                        Sales Forecast
+                    </h3>
+                    <p class="text-gray-400">Category: Data Analysis</p>
+                    <p class="mt-3 text-gray-200">A program developed for predicting future sales volumes based on historical data and trends.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-boxes list-item-icon"></i>
+                        Inventory Forecast
+                    </h3>
+                    <p class="text-gray-400">Category: Data Analysis</p>
+                    <p class="mt-3 text-gray-200">A program focused on predicting future inventory needs and optimizing stock levels.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-user-check list-item-icon"></i>
+                        Employee Management
+                    </h3>
+                    <p class="text-gray-400">Category: HR Software</p>
+                    <p class="mt-3 text-gray-200">A software solution for employee evaluation and performance management.</p>
+                </div>
+                
+                <!-- Miscellaneous Project -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
+                        <i class="fas fa-book-reader list-item-icon"></i>
+                        The Secret (Book)
+                    </h3>
+                    <p class="text-gray-400">Category: Writing</p>
+                    <p class="mt-3 text-gray-200">A book containing political secrets and analyses.</p>
+                </div>
+                
             </div>
         </section>
 
@@ -185,43 +276,43 @@
         <section id="education" class="mb-12">
             <h2 class="section-title">
                 <i class="fas fa-graduation-cap text-blue-400"></i>
-                التعليم
+                Education
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-shield-alt list-item-icon"></i>
-                        بكالوريوس هندسة الأمن السيبراني والحرب السيبرانية
+                        Bachelor of Cybersecurity and Cyber Warfare Engineering
                     </h3>
-                    <p class="text-gray-400">جامعة كوينز بلفاست | ديسمبر 2025</p>
+                    <p class="text-gray-400">QUEENS University Belfast | Dec 2025</p>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-balance-scale list-item-icon"></i>
-                        بكالوريوس حقوق
+                        Bachelor of Law / Cairo University, Egypt
                     </h3>
-                    <p class="text-gray-400">جامعة القاهرة، مصر | أكتوبر 2025</p>
+                    <p class="text-gray-400">Oct 2025</p>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-users list-item-icon"></i>
-                        إدارة الموارد البشرية
+                        Human Resources Management / British Foundation Egypt
                     </h3>
-                    <p class="text-gray-400">المؤسسة البريطانية مصر | فبراير 2022</p>
+                    <p class="text-gray-400">February 2022</p>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-users list-item-icon"></i>
-                        إدارة الموارد البشرية
+                        Human Resources Management / CYC Academy
                     </h3>
-                    <p class="text-gray-400">أكاديمية CYC | أبريل 2025</p>
+                    <p class="text-gray-400">April 2025</p>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
                         <i class="fas fa-utensils list-item-icon"></i>
-                        دبلوم إدارة عمليات المطاعم
+                        Restaurant Operations Management Diploma
                     </h3>
-                    <p class="text-gray-400">أبريل 2025</p>
+                    <p class="text-gray-400">April 2025</p>
                 </div>
             </div>
         </section>
@@ -230,17 +321,17 @@
         <section id="skills" class="mb-12">
             <h2 class="section-title">
                 <i class="fas fa-cogs text-blue-400"></i>
-                المهارات
+                Skills
             </h2>
             <div class="card">
                 <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-200">
-                    <li class="list-item-with-icon"><i class="fas fa-file-excel list-item-icon"></i>جداول Excel</li>
-                    <li class="list-item-with-icon"><i class="fas fa-briefcase list-item-icon"></i>إتقان Workday</li>
-                    <li class="list-item-with-icon"><i class="fas fa-users-line list-item-icon"></i>لاعب فريق</li>
-                    <li class="list-item-with-icon"><i class="fas fa-hourglass-half list-item-icon"></i>مهارات ممتازة في إدارة الوقت</li>
-                    <li class="list-item-with-icon"><i class="fas fa-handshake-angle list-item-icon"></i>إدارة النزاعات</li>
-                    <li class="list-item-with-icon"><i class="fas fa-microphone-alt list-item-icon"></i>الخطابة</li>
-                    <li class="list-item-with-icon"><i class="fas fa-chart-line list-item-icon"></i>تحليل البيانات</li>
+                    <li class="list-item-with-icon"><i class="fas fa-file-excel list-item-icon"></i>Excel Sheets</li>
+                    <li class="list-item-with-icon"><i class="fas fa-briefcase list-item-icon"></i>Proficient with Workday</li>
+                    <li class="list-item-with-icon"><i class="fas fa-users-line list-item-icon"></i>Team Player</li>
+                    <li class="list-item-with-icon"><i class="fas fa-hourglass-half list-item-icon"></i>Excellent Time Management Skills</li>
+                    <li class="list-item-with-icon"><i class="fas fa-handshake-angle list-item-icon"></i>Conflict Management</li>
+                    <li class="list-item-with-icon"><i class="fas fa-microphone-alt list-item-icon"></i>Public Speaking</li>
+                    <li class="list-item-with-icon"><i class="fas fa-chart-line list-item-icon"></i>Data Analytics</li>
                 </ul>
             </div>
         </section>
@@ -249,89 +340,16 @@
         <section id="courses" class="mb-12">
             <h2 class="section-title">
                 <i class="fas fa-book-open text-blue-400"></i>
-                الدورات
+                Courses
             </h2>
             <div class="card">
                 <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-200">
                     <!-- Prioritized Technological Courses -->
-                    <li class="list-item-with-icon"><i class="fas fa-certificate list-item-icon"></i>شهادة OSCP / Offensive Security</li>
-                    <li class="list-item-with-icon"><i class="fas fa-link list-item-icon"></i>واجهات برمجة تطبيقات البلوكتشين (Blockchain APIs) / FreeCodeCamp</li>
-                    <li class="list-item-with-icon"><i class="fas fa-code list-item-icon"></i>برمجة بايثون (Python programming) / FreeCodeCamp</li>
-                    <li class="list-item-with-icon"><i class="fas fa-terminal list-item-icon"></i>برمجة Batch scripting / FreeCodeCamp</li>
-                    <li class="list-item-with-icon"><i class="fas fa-terminal list-item-icon"></i>أوامر Bash / FreeCodeCamp</li>
-                    <li class="list-item-with-icon"><i class="fas fa-keyboard list-item-icon"></i>إدخال البيانات (Data entry) / FreeCodeCamp</li>
+                    <li class="list-item-with-icon"><i class="fas fa-certificate list-item-icon"></i>OSCP Certification / Offensive Security</li>
+                    <li class="list-item-with-icon"><i class="fas fa-link list-item-icon"></i>Blockchain APIs / FreeCodeCamp</li>
+                    <li class="list-item-with-icon"><i class="fas fa-code list-item-icon"></i>Python Programming / FreeCodeCamp</li>
+                    <li class="list-item-with-icon"><i class="fas fa-terminal list-item-icon"></i>Batch Scripting / FreeCodeCamp</li>
+                    <li class="list-item-with-icon"><i class="fas fa-terminal list-item-icon"></i>Bash Command / FreeCodeCamp</li>
+                    <li class="list-item-with-icon"><i class="fas fa-keyboard list-item-icon"></i>Data Entry / FreeCodeCamp</li>
                     <!-- Other Courses -->
-                    <li class="list-item-with-icon"><i class="fas fa-brain list-item-icon"></i>قوة الثقة بالنفس / مركز التدريب الكندي</li>
-                    <li class="list-item-with-icon"><i class="fas fa-heart-crack list-item-icon"></i>التعلق المرضي / مركز التدريب الكندي</li>
-                    <li class="list-item-with-icon"><i class="fas fa-user-tag list-item-icon"></i>أنماط الشخصية / مركز التدريب الكندي</li>
-                    <li class="list-item-with-icon"><i class="fas fa-frown list-item-icon"></i>إدارة الغضب / مركز التدريب الكندي</li>
-                    <li class="list-item-with-icon"><i class="fas fa-user-friends list-item-icon"></i>التخلص من الانطوائية / مركز التدريب الكندي</li>
-                    <li class="list-item-with-icon"><i class="fas fa-crown list-item-icon"></i>مهارات القيادة / أكاديمية إعمل بيزنس</li>
-                    <li class="list-item-with-icon"><i class="fas fa-hands-clapping list-item-icon"></i>لغة الجسد / أكاديمية إعمل بيزنس</li>
-                    <li class="list-item-with-icon"><i class="fas fa-ban list-item-icon"></i>مواجهة الاعتراضات / أكاديمية إعمل بيزنس</li>
-                    <li class="list-item-with-icon"><i class="fas fa-handshake list-item-icon"></i>رضا العملاء / أكاديمية إعمل بيزنس</li>
-                    <li class="list-item-with-icon"><i class="fas fa-headset list-item-icon"></i>مراكز الاتصال / أكاديمية إعمل بيزنس</li>
-                    <li class="list-item-with-icon"><i class="fas fa-lungs-virus list-item-icon"></i>التوعية الصحية والوقاية ومكافحة العدوى من COVID-19 / أكاديمية إعمل بيزنس، مدرسة يوتا للطب</li>
-                    <li class="list-item-with-icon"><i class="fas fa-person-chalkboard list-item-icon"></i>TOT / disasterready.org</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Activities Section -->
-        <section id="activities" class="mb-12">
-            <h2 class="section-title">
-                <i class="fas fa-heart text-blue-400"></i>
-                الأنشطة
-            </h2>
-            <div class="card">
-                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-200">
-                    <li class="list-item-with-icon"><i class="fas fa-book list-item-icon"></i>الأدب</li>
-                    <li class="list-item-with-icon"><i class="fas fa-leaf list-item-icon"></i>الحفاظ على البيئة</li>
-                    <li class="list-item-with-icon"><i class="fas fa-palette list-item-icon"></i>الفن</li>
-                    <li class="list-item-with-icon"><i class="fas fa-person-biking list-item-icon"></i>اليوغا</li>
-                    <li class="list-item-with-icon"><i class="fas fa-chess-knight list-item-icon"></i>الشطرنج</li>
-                    <li class="list-item-with-icon"><i class="fas fa-plane-departure list-item-icon"></i>السفر</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Internship Section -->
-        <section id="internship" class="mb-12">
-            <h2 class="section-title">
-                <i class="fas fa-building text-blue-400"></i>
-                التدريب
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="card">
-                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
-                        <i class="fas fa-bank list-item-icon"></i>
-                        بنك مصر
-                    </h3>
-                    <p class="text-gray-400">2021</p>
-                </div>
-                <div class="card">
-                    <h3 class="text-xl font-semibold text-blue-300 list-item-with-icon">
-                        <i class="fas fa-laptop-code list-item-icon"></i>
-                        شركة HP
-                    </h3>
-                    <p class="text-gray-400">2022</p>
-                    <ul class="list-disc list-inside mt-3 text-gray-200 space-y-1">
-                        <li>الربح والخسارة</li>
-                        <li>توظيف الموظفين</li>
-                        <li>تكنولوجيا المعلومات للنجاح</li>
-                        <li>إدارة المخزون</li>
-                        <li>الجمهور المستهدف</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
-        <p>&copy; 2025 أحمد الخولي. جميع الحقوق محفوظة.</p>
-    </footer>
-
-</body>
-</html>
+                   
